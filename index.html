@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<title>Speed math, a game for boosting your calculation speed</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="styles.css">
+<script src="time.js"></script>
+<script src="Question.js"></script>
+</head>
+<main>
+<div role="main">
+<body onload="initTimer();">
+<div id="main-content">
+<h1>Welcome to speed math game</h1>
+<br><br>
+<div aria-live="polite" class="intro-carousel">
+<div class="game-carousel1">
+<h2>Introduction</h2>
+<br>
+<p>In this game, random calculation question is asked according to your selections of calculation technique.</p>
+</div>
+<div class="game-carousel2">
+<h2>Speed up your calculation with the background timer</h2>
+<br>
+<p>This game is designed to boost your calculation speed up to the possible maximum extent by including a timer in the background.<br>After completing game, you can retrieve the total time you took to calculate all the questions<br>
+</div>
+<div class="game-carousel3">
+<h2>Thanks for playing this game</h2>
+<br>
+<p>I hope you enjoy this web game that is made accessible as best as possible.</p>
+</div>
+</div>
+<button id="startSetup" onclick="setupGameDialog();">setup game</button>
+<div id="question_section">
+
+</div>
+<p id="clock"></p>
+</div>
+<div class="game-setup-modal" aria-labelledby="setup-modal-title" role="dialog">
+<button id="close-game-setup" onclick="closeGameSetupDialog();">Close</button>
+<h2 id="setup-modal-title">Setup speed math</h2>
+<br><br>
+<form onsubmit="save_info();" role="form" aria-labelledby="setup-modal-title" action="javascript:void(0);">
+<label id="total_questions_label">Enter the total number of question you wish to answer: (Minimum should be 3</label>
+<input id="total_questions" name="total_questions" type="number" aria-labelledby="total_questions_label" min="3" required>
+<br>
+<label id="label_max_number">Enter the maximum number that you wish to calculate: (Minimum should be 5)</label>
+<input id="max_numbers" name="max_numbers" aria-labelledby="label_max_number" min="5" type="number" required>
+<br>
+<input type="submit">
+</form>
+</div>
+<div class="game-report-modal" aria-labelledby="report-modal-title" role="dialog">
+<button id="close-game-report" onclick="closeGameReportDialog();">Close</button>
+<h2 id="report-modal-title">Answer report</h2>
+<br><br>
+</div>
+
+</body>
+</div>
+</main>
+
+</html>
